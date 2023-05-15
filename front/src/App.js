@@ -1,8 +1,9 @@
 import './App.css';
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavigationBar from "./components/NavigationBar.jsx";
+import NavigationBar from "./components/NavigationBar";
 import Home from "./components/Home";
+import Login from "./components/Login";
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
                 <div className="container-fluid">
                     <Routes>
                         <Route path="home" element={<Home />}/>
+                        <Route path="login" element={<Login />}/>
                     </Routes>
                 </div>
             </BrowserRouter>

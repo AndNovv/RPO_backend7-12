@@ -37,12 +37,8 @@ public class Museum {
 
 
     @JsonIgnore
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToMany
     @JoinTable(name = "usersmuseums", joinColumns = @JoinColumn(name = "museumid"), inverseJoinColumns = @JoinColumn(name = "userid"))
     public Set<User> users = new HashSet<>();
 
-    public void removeUser(User u) {
-        this.users.remove(u);
-        u.museums.remove(this);
-    }
 }

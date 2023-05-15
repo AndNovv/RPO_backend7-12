@@ -34,6 +34,7 @@ export default connect() (function  Login() {
                 nav("/home");
             })
             .catch( err => {
+                setLoggingIn(false);
             })
     }
 
